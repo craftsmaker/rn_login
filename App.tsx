@@ -1,19 +1,21 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import * as React from 'react';
+import { Text, View, StyleSheet } from 'react-native';
+import {NavigationContainer} from "@react-navigation/native";
+import {createStackNavigator} from "@react-navigation/stack";
+import Constants from 'expo-constants';
+import Login from "./screens/Login";
+import Register from "./screens/Register";
+import {RockStackParamList} from "./utils/types";
+
+const Stack = createStackNavigator<RockStackParamList>();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator headerMode="none">
+        <Stack.Screen name="Login" component={Login}/>
+        <Stack.Screen name="Register" component={Register}/>
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
