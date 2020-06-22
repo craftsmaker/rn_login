@@ -3,9 +3,9 @@ import { Text, View, StyleSheet } from 'react-native';
 import {NavigationContainer} from "@react-navigation/native";
 import {createStackNavigator} from "@react-navigation/stack";
 import Constants from 'expo-constants';
-import Login from "./screens/Login";
-import Register from "./screens/Register";
-import {RockStackParamList} from "./utils/types";
+import Login from "./src/screens/Login";
+import Register from "./src/screens/Register";
+import {RockStackParamList} from "./src/utils/types";
 
 const Stack = createStackNavigator<RockStackParamList>();
 

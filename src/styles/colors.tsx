@@ -6,4 +6,5 @@ export default {
     linkColor: "#5F4AE7",
     bottomGradientColor: "#6A49E4",
     topGradientColor: "#7C47DE",
+    fadingColor: "#9C9C9C",
 }

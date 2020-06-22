@@ -12,9 +12,9 @@ type Props = {
   navigation: ProfileScreenNavigationProp;
 };
 
-export default function({navigation}: Props){
+const Register:React.FC<Props> = ({navigation}) => {
   return(
-    <View>
+    <View style={{paddingTop: 20}}>
       <Text>SIGN UP</Text>
       <Text>Welcome Home My Friend!</Text>
       <TextInput
@@ -40,3 +40,5 @@ export default function({navigation}: Props){
     </View>
   )
 }
+
+export default Register;
