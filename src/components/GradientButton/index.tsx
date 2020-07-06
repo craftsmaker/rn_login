@@ -7,9 +7,9 @@ const GradientButton: React.FC<{title: string}> = ({title}) => {
     return(
         <LinearGradient
             colors={[style.topGradientColor,style.bottomGradientColor]} 
-            style={{flexGrow:0,backgroundColor: "purple",height: "60%", maxHeight: 100,justifyContent: "center"}}
+            style={{flexGrow:0,backgroundColor: "purple",height: 70,justifyContent: "center",borderRadius: 6}}
         >
-            <Text style={{color: "white",textAlign: "center"}}>{title}</Text>
+            <Text style={{color: "white",textAlign: "center"}}>{title.toUpperCase()}</Text>
         </LinearGradient>
     )
 }
