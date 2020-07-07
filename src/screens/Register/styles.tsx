@@ -9,13 +9,13 @@ export default StyleSheet.create({
   },
   form: {
     flexGrow: 1,
-    flexBasis: 280,
+    flexBasis: 350,
     flexShrink: 0,
   },
   inputSelection: {
     flexGrow: 1,
     flexShrink: 0,
-    flexBasis: 50,
+    flexBasis: 250,
     paddingVertical: 10,
   },
   checkboxSelection: {

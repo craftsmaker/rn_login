@@ -1,7 +1,7 @@
 import React from "react";
-import { View, Text, TextInput, Button } from "react-native";
+import { View, Text } from "react-native";
 import { StackNavigationProp } from "@react-navigation/stack";
-import { Feather, AntDesign } from "@expo/vector-icons";
+import { Feather, AntDesign, MaterialIcons } from "@expo/vector-icons";
 import { RockStackParamList } from "../../utils/types";
 import Container from "../../components/Container";
 import Form from "../../components/Form";
@@ -9,7 +9,6 @@ import styles from "./styles";
 import Input from "../../components/Input";
 import GradientButton from "../../components/GradientButton";
 import Checkbox from "../../components/Checkbox";
-import colors from "../../styles/colors";
 
 type ProfileScreenNavigationProp = StackNavigationProp<
   RockStackParamList,
@@ -43,11 +42,19 @@ function LocalForm() {
   return (
     <View style={styles.form}>
       <View style={styles.inputSelection}>
-        <Input placeholder="Email">
+        <Input placeholder="Name" style={{ flexShrink: 0, flexBasis: 25 }}>
+          <MaterialIcons name="person-outline" style={styles.icon} />
+        </Input>
+        <Input placeholder="Email" style={{ flexShrink: 0, flexBasis: 25 }}>
           <Feather name="mail" style={styles.icon} />
         </Input>
-
-        <Input placeholder="Password">
+        <Input placeholder="Password" style={{ flexShrink: 0, flexBasis: 25 }}>
+          <AntDesign name="lock" style={styles.icon} />
+        </Input>
+        <Input
+          placeholder="Password retype"
+          style={{ flexShrink: 0, flexBasis: 25 }}
+        >
           <AntDesign name="lock" style={styles.icon} />
         </Input>
       </View>
