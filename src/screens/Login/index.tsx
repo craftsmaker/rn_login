@@ -2,6 +2,7 @@ import React from "react";
 import { View, Text } from "react-native";
 import { StackNavigationProp } from "@react-navigation/stack";
 import { Feather, AntDesign } from "@expo/vector-icons";
+import * as Google from "expo-google-app-auth";
 import { RockStackParamList } from "../../utils/types";
 import style from "../../styles/colors";
 import Button from "../../components/Button";
@@ -12,7 +13,7 @@ import Container from "../../components/Container";
 import GradientButton from "../../components/GradientButton";
 import colors from "../../styles/colors";
 import styles from "./styles";
-
+//androidID: 574556650056-g9d85gqv4ulta632su6rff2f64rfe1gv.apps.googleusercontent.com
 type ProfileScreenNavigationProp = StackNavigationProp<
   RockStackParamList,
   "Login"
@@ -47,6 +48,31 @@ const Login: React.FC<Props> = ({ navigation }) => {
         title="log in with google"
         color={style.googleColor}
         backgroundColor={style.googleBackgroundColor}
+        onPress={() => {
+          // checking
+          console.log("You want to login google");
+          async function getPermissions() {
+            const response = await Google.logInAsync({
+              androidClientId:
+                "574556650056-g9d85gqv4ulta632su6rff2f64rfe1gv.apps.googleusercontent.com",
+              scopes: ["profile"],
+            });
+
+            if (response.type === "success") {
+              // Then you can use the Google REST API
+              // let userInfoResponse = await fetch(
+              //   "https://www.googleapis.com/userinfo/v2/me",
+              //   {
+              //     headers: { Authorization: `Bearer ${accessToken}` },
+              //   }
+              // );
+              console.log(response.user);
+
+              // console.log(userInfoResponse);
+            }
+          }
+          getPermissions();
+        }}
       />
     </Container>
   );

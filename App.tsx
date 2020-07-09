@@ -2,7 +2,7 @@ import * as React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import {
   createStackNavigator,
-  CardStyleInterpolators,
+  CardStyleInterpolators,  
 } from "@react-navigation/stack";
 import Login from "./src/screens/Login";
 import Register from "./src/screens/Register";
