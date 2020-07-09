@@ -49,8 +49,6 @@ const Login: React.FC<Props> = ({ navigation }) => {
         color={style.googleColor}
         backgroundColor={style.googleBackgroundColor}
         onPress={() => {
-          // checking
-          console.log("You want to login google");
           async function getPermissions() {
             const response = await Google.logInAsync({
               androidClientId:
@@ -59,16 +57,9 @@ const Login: React.FC<Props> = ({ navigation }) => {
             });
 
             if (response.type === "success") {
-              // Then you can use the Google REST API
-              // let userInfoResponse = await fetch(
-              //   "https://www.googleapis.com/userinfo/v2/me",
-              //   {
-              //     headers: { Authorization: `Bearer ${accessToken}` },
-              //   }
-              // );
-              console.log(response.user);
-
-              // console.log(userInfoResponse);
+              alert(
+                `name: ${response.user.name}\nemail: ${response.user.email}`
+              );
             }
           }
           getPermissions();
