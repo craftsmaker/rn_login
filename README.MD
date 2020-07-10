@@ -11,19 +11,19 @@
 </p>
 
 <p align="center">
-  <a href="#tecnologias">Tecnologias</a> &nbsp; &nbsp; | &nbsp; &nbsp;
-  <a href="#projeto">Projeto</a> &nbsp; &nbsp; | &nbsp; &nbsp;
+  <a href="#tecnologies">Technology</a> &nbsp; &nbsp; | &nbsp; &nbsp;
+  <a href="#project">Project</a> &nbsp; &nbsp; | &nbsp; &nbsp;
   <a href="#installation">Installation</a> &nbsp; &nbsp; | &nbsp; &nbsp;
-  <a href="#licença">Licença</a>
+  <a href="#license">License</a>
 </p>
 
-## Tecnologias
+## Technologies
 
 - [React](https://reactjs.org)
 - [React Native](https://facebook.github.io/react-native/)
 - [Expo](https://expo.io/)
 
-## Projeto
+## Project
 
 [Design - Elegant IT Ltd.](https://dribbble.com/shots/6910175-Apps-Login-page-design)
 
@@ -49,6 +49,6 @@ npm i
 npm start
 ```
 
-## Licença
+## License
 
 This project is under MIT license.
