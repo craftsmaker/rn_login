@@ -25,4 +25,30 @@
 
 ## Projeto
 
-[Design - Elegant IT Ltd.](https://dr
+[Design - Elegant IT Ltd.](https://dribbble.com/shots/6910175-Apps-Login-page-design)
+
+## Installation
+
+Use this command in the terminal
+
+```
+git clone https://github.com/craftsmaker/microsoft-alarm-clone.git
+```
+
+Enter in the resulted folder and use these commands:
+
+```
+yarn install
+yarn start
+```
+
+ou
+
+```
+npm i
+npm start
+```
+
+## Licença
+
+This project is under MIT license.
